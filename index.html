@@ -5,12 +5,12 @@
 <title>Clipboard Enhanced with Editing and Partition Support</title>
 <style>
   body {
-    background-color: #111; /* ¾îµÎ¿î ¹è°æ */
-    color: #fff; /* ¹àÀº ±Û¾¾ */
+    background-color: #111; /* ì–´ë‘ìš´ ë°°ê²½ */
+    color: #fff; /* ë°ì€ ê¸€ì”¨ */
   }
   .title {
   text-align: left;
-  font-size: 12px; /* ±ÛÀÚ Å©±â¸¦ 18px·Î Á¶Á¤ */
+  font-size: 12px; /* ê¸€ì í¬ê¸°ë¥¼ 18pxë¡œ ì¡°ì • */
   margin-top: 4px;
   margin-bottom: 4px;
   }
@@ -19,42 +19,42 @@
     margin: 5px;
     padding: 5px 10px;
     font-size: 14px;
-    background-color: #333; /* ¾îµÎ¿î ¿ä¼Ò ¹è°æ */
-    border: 0px solid #777; /* ¾îµÎ¿î Å×µÎ¸® */
+    background-color: #333; /* ì–´ë‘ìš´ ìš”ì†Œ ë°°ê²½ */
+    border: 0px solid #777; /* ì–´ë‘ìš´ í…Œë‘ë¦¬ */
     border-radius: 6px;
     cursor: pointer;
-    color: #ddd; /* ¾îµÎ¿î ¿ä¼Ò ³» ±Û¾¾ */
+    color: #ddd; /* ì–´ë‘ìš´ ìš”ì†Œ ë‚´ ê¸€ì”¨ */
   }
 
   .edit-btn {
       margin: 2px;
       padding: 1px 1px;
       font-size: 10px;
-      background-color: #111; /* ¾îµÎ¿î ¿ä¼Ò ¹è°æ */
-      color: #aaa; /* ¾îµÎ¿î ¿ä¼Ò ³» ±Û¾¾ */
-      border: none; /* Å×µÎ¸® Á¦°Å */
+      background-color: #111; /* ì–´ë‘ìš´ ìš”ì†Œ ë°°ê²½ */
+      color: #aaa; /* ì–´ë‘ìš´ ìš”ì†Œ ë‚´ ê¸€ì”¨ */
+      border: none; /* í…Œë‘ë¦¬ ì œê±° */
       border-radius: 0px;
       cursor: pointer;
   }
 
   .delete-btn {
     margin-left: 5px;
-    color: #e74c3c; /* °­Á¶µÈ »èÁ¦ ¹öÆ° »ö»ó */
+    color: #e74c3c; /* ê°•ì¡°ëœ ì‚­ì œ ë²„íŠ¼ ìƒ‰ìƒ */
     cursor: pointer;
     font-size: 20px;
   }
   #phrasesContainer {
-  display: block; /* flex ´ë½Å block ·¹ÀÌ¾Æ¿ô »ç¿ë */
-  -webkit-column-count: 2; /* Safari/Chrome, ±âÅ¸ WebKit ±â¹İ ºê¶ó¿ìÀú */
+  display: block; /* flex ëŒ€ì‹  block ë ˆì´ì•„ì›ƒ ì‚¬ìš© */
+  -webkit-column-count: 2; /* Safari/Chrome, ê¸°íƒ€ WebKit ê¸°ë°˜ ë¸Œë¼ìš°ì € */
   -moz-column-count: 2; /* Firefox */
-  column-count: 2; /* ¿­ÀÇ ¼ö */
-  -webkit-column-gap: 20px; /* Safari/Chrome, ±âÅ¸ WebKit ±â¹İ ºê¶ó¿ìÀú */
+  column-count: 2; /* ì—´ì˜ ìˆ˜ */
+  -webkit-column-gap: 20px; /* Safari/Chrome, ê¸°íƒ€ WebKit ê¸°ë°˜ ë¸Œë¼ìš°ì € */
   -moz-column-gap: 20px; /* Firefox */
-  column-gap: 20px; /* ¿­ »çÀÌÀÇ °£°İ */
+  column-gap: 20px; /* ì—´ ì‚¬ì´ì˜ ê°„ê²© */
   max-height: 73vh;
   overflow-y: 75vh;
   overflow-x: auto; 
-  padding: 10px; /* ÄÁÅ×ÀÌ³Ê ¾ÈÂÊ ¿©¹é */
+  padding: 10px; /* ì»¨í…Œì´ë„ˆ ì•ˆìª½ ì—¬ë°± */
 }
   .phrase-container {
     margin: 10px;
@@ -65,10 +65,10 @@
     font-size: 14px;
     left: 0;
     width: 100%;
-    /*background: #222; /* °íÁ¤µÈ ¿ä¼Ò ¹è°æ */
+    /*background: #222; /* ê³ ì •ëœ ìš”ì†Œ ë°°ê²½ */
     text-align: center;
     padding: 5px;
-    border-top: 1px solid #444; /* °íÁ¤µÈ ¿ä¼Ò Å×µÎ¸® */
+    border-top: 1px solid #444; /* ê³ ì •ëœ ìš”ì†Œ í…Œë‘ë¦¬ */
   }
   .partition-controls {
     bottom: 80px;
@@ -84,38 +84,38 @@
   margin-left: 30px;
   background-color: #222;
   border-radius: 10px;
-  margin-right: 0px; /* ¿À¸¥ÂÊ¿¡ ¸¶ÁøÀ» Áà¼­ ±×·ì °£ °£°İÀ» Á¶Á¤ */
+  margin-right: 0px; /* ì˜¤ë¥¸ìª½ì— ë§ˆì§„ì„ ì¤˜ì„œ ê·¸ë£¹ ê°„ ê°„ê²©ì„ ì¡°ì • */
 }
   .floating-message {
   position: fixed;
-  bottom: 20%; /* È­¸é ÇÏ´Ü¿¡¼­ºÎÅÍÀÇ À§Ä¡ */
-  left: 50%; /* Áß¾Ó Á¤·ÄÀ» À§ÇÑ ¼³Á¤ */
-  transform: translateX(-50%); /* Á¤È®ÇÑ Áß¾Ó Á¤·ÄÀ» À§ÇÑ ¼³Á¤ */
+  bottom: 20%; /* í™”ë©´ í•˜ë‹¨ì—ì„œë¶€í„°ì˜ ìœ„ì¹˜ */
+  left: 50%; /* ì¤‘ì•™ ì •ë ¬ì„ ìœ„í•œ ì„¤ì • */
+  transform: translateX(-50%); /* ì •í™•í•œ ì¤‘ì•™ ì •ë ¬ì„ ìœ„í•œ ì„¤ì • */
   background-color: #333;
   color: #fff;
   padding: 10px;
   border-radius: 5px;
-  display: none; /* ±âº»ÀûÀ¸·Î´Â ¼û±è Ã³¸® */
-  z-index: 1000; /* ´Ù¸¥ ¿ä¼Òµé À§¿¡ Ç¥½Ã */
+  display: none; /* ê¸°ë³¸ì ìœ¼ë¡œëŠ” ìˆ¨ê¹€ ì²˜ë¦¬ */
+  z-index: 1000; /* ë‹¤ë¥¸ ìš”ì†Œë“¤ ìœ„ì— í‘œì‹œ */
   }
   button:hover, .copy-text:hover, .edit-btn:hover {
-    background-color: #666; /* È£¹ö ½Ã ¹è°æ */
+    background-color: #666; /* í˜¸ë²„ ì‹œ ë°°ê²½ */
   }
   input[type="text"] {
-    color: #ccc; /* ÀÔ·Â ÇÊµå ±Û¾¾ »ö»ó */
-    border: 1px solid #555; /* ÀÔ·Â ÇÊµå Å×µÎ¸® */
+    color: #ccc; /* ì…ë ¥ í•„ë“œ ê¸€ì”¨ ìƒ‰ìƒ */
+    border: 1px solid #555; /* ì…ë ¥ í•„ë“œ í…Œë‘ë¦¬ */
   }
 </style>
 </head>
 <body>
-<div id="floatingMessage" class="floating-message">º¹»çµÇ¾ú½À´Ï´Ù!</div>
-<div class="title">LepuTools - Quick Conversation v1.13    |    Q : ´©Àûº¹»ç, W : ´©ÀûÃÊ±âÈ­</div>
-<input type="text" id="newPhrase" placeholder="ÀÚÁÖ ¾²´Â ¹®±¸">
-<button id="addPhraseButton">Ãß°¡ÇÏ±â</button>
+<div id="floatingMessage" class="floating-message">ë³µì‚¬ë˜ì—ˆìŠµë‹ˆë‹¤!</div>
+<div class="title">LepuTools - Quick Conversation v1.13    |    Q : ëˆ„ì ë³µì‚¬, W : ëˆ„ì ì´ˆê¸°í™”</div>
+<input type="text" id="newPhrase" placeholder="ìì£¼ ì“°ëŠ” ë¬¸êµ¬">
+<button id="addPhraseButton">ì¶”ê°€í•˜ê¸°</button>
 <div class="button-group">
-    <button onclick="exportToFile()">µ¥ÀÌÅÍ ÀúÀå</button>
+    <button onclick="exportToFile()">ë°ì´í„° ì €ì¥</button>
     <input type="file" id="fileInput" style="display: none;" onchange="importFromFile(event)"/>
-    <button id="loadButton">µ¥ÀÌÅÍ ºÒ·¯¿À±â</button>
+    <button id="loadButton">ë°ì´í„° ë¶ˆëŸ¬ì˜¤ê¸°</button>
   </div>
 <div id="phrasesContainer"></div>
 <div id="feedback"></div>
@@ -131,8 +131,8 @@
 <div class="file-controls">
   
   <div class="button-group">
-    <button id="copyButton">´©Àû º¹»ç</button>
-    <button id="resetButton">´©Àû ÃÊ±âÈ­</button>
+    <button id="copyButton">ëˆ„ì  ë³µì‚¬</button>
+    <button id="resetButton">ëˆ„ì  ì´ˆê¸°í™”</button>
 </div>
 </div>
 
@@ -144,20 +144,20 @@ document.addEventListener('DOMContentLoaded', () => {
   setPartition(lastPartition, false);
   renderPhrases();
 
-  // °øÁö»çÇ× ¼³Á¤
+  // ê³µì§€ì‚¬í•­ ì„¤ì •
   const feedback = document.getElementById('feedback');
-  feedback.textContent = 'ÀÚÁÖ ¾²´Â ¹®±¸¸¦ Ãß°¡ÇÏ°í Å¬¸¯ÇÏ¸é º¹»çµË´Ï´Ù.'; // ÃÊ±â °øÁö»çÇ× ÅØ½ºÆ® ¼³Á¤
+  feedback.textContent = 'ìì£¼ ì“°ëŠ” ë¬¸êµ¬ë¥¼ ì¶”ê°€í•˜ê³  í´ë¦­í•˜ë©´ ë³µì‚¬ë©ë‹ˆë‹¤.'; // ì´ˆê¸° ê³µì§€ì‚¬í•­ í…ìŠ¤íŠ¸ ì„¤ì •
 });
 
 document.getElementById('copyButton').addEventListener('click', function() {
   navigator.clipboard.writeText(accumulatedText.trim()).then(function() {
     console.log('Accumulated text copied to clipboard');
 
-    // º¹»ç ÈÄ feedback ¾÷µ¥ÀÌÆ®
+    // ë³µì‚¬ í›„ feedback ì—…ë°ì´íŠ¸
     const feedback = document.getElementById('feedback');
-    feedback.textContent = '´©Àû º¹»ç <' + accumulatedText.trim() + '> º¹»çµÊ.';
+    feedback.textContent = 'ëˆ„ì  ë³µì‚¬ <' + accumulatedText.trim() + '> ë³µì‚¬ë¨.';
     
-    // ´©ÀûµÈ ÅØ½ºÆ® ÃÊ±âÈ­ (¼±ÅÃ»çÇ×)
+    // ëˆ„ì ëœ í…ìŠ¤íŠ¸ ì´ˆê¸°í™” (ì„ íƒì‚¬í•­)
     accumulatedText = '';
   }).catch(function(err) {
     console.error('Could not copy text to clipboard:', err);
@@ -168,56 +168,56 @@ document.getElementById('copyButton').addEventListener('click', function() {
 
 
 document.getElementById('loadButton').addEventListener('click', function() {
-    document.getElementById('fileInput').click(); // ¿ø·¡ ÆÄÀÏ ÀÔ·ÂÀ» Æ®¸®°Å
+    document.getElementById('fileInput').click(); // ì›ë˜ íŒŒì¼ ì…ë ¥ì„ íŠ¸ë¦¬ê±°
 });
 
-// ´©Àû ³»¿ë ÃÊ±âÈ­ ¹öÆ° Å¬¸¯ ÀÌº¥Æ® ¸®½º³Ê
+// ëˆ„ì  ë‚´ìš© ì´ˆê¸°í™” ë²„íŠ¼ í´ë¦­ ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ
 document.getElementById('resetButton').addEventListener('click', function() {
-  accumulatedText = ''; // ´©ÀûµÈ ÅØ½ºÆ® ÃÊ±âÈ­
+  accumulatedText = ''; // ëˆ„ì ëœ í…ìŠ¤íŠ¸ ì´ˆê¸°í™”
   const feedback = document.getElementById('feedback');
-  feedback.textContent = '´©ÀûµÈ ³»¿ëÀÌ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.'; // feedback ¾÷µ¥ÀÌÆ®
+  feedback.textContent = 'ëˆ„ì ëœ ë‚´ìš©ì´ ì´ˆê¸°í™”ë˜ì—ˆìŠµë‹ˆë‹¤.'; // feedback ì—…ë°ì´íŠ¸
 });
 
 document.addEventListener('keydown', function(e) {
-  // Q¸¦ ´­·¶À» ¶§ÀÇ Á¶°Ç
+  // Që¥¼ ëˆŒë €ì„ ë•Œì˜ ì¡°ê±´
   if (e.key === 'q') {
     e.preventDefault();
     
-    // ´©ÀûµÈ ³»¿ë º¹»ç ÇÔ¼ö È£Ãâ
+    // ëˆ„ì ëœ ë‚´ìš© ë³µì‚¬ í•¨ìˆ˜ í˜¸ì¶œ
     navigator.clipboard.writeText(accumulatedText.trim()).then(function() {
       console.log('Accumulated text copied to clipboard');
-      // º¹»ç ÈÄ feedback ¾÷µ¥ÀÌÆ®
+      // ë³µì‚¬ í›„ feedback ì—…ë°ì´íŠ¸
       const feedback = document.getElementById('feedback');
-      feedback.textContent = 'º¹»ç ¿Ï·á: ' + accumulatedText.trim();
+      feedback.textContent = 'ë³µì‚¬ ì™„ë£Œ: ' + accumulatedText.trim();
     }).catch(function(err) {
       console.error('Could not copy text to clipboard:', err);
     });
   }
 
   if (e.key.toLowerCase() === 'w') {
-    e.preventDefault(); // ºê¶ó¿ìÀúÀÇ ±âº» µ¿ÀÛ ¹æÁö
-    accumulatedText = ''; // ´©ÀûµÈ ÅØ½ºÆ® ÃÊ±âÈ­
+    e.preventDefault(); // ë¸Œë¼ìš°ì €ì˜ ê¸°ë³¸ ë™ì‘ ë°©ì§€
+    accumulatedText = ''; // ëˆ„ì ëœ í…ìŠ¤íŠ¸ ì´ˆê¸°í™”
     console.log('Accumulated text cleared');
 
     const feedback = document.getElementById('feedback');
-    feedback.textContent = '´©ÀûµÈ ³»¿ëÀÌ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù.';
+    feedback.textContent = 'ëˆ„ì ëœ ë‚´ìš©ì´ ì´ˆê¸°í™”ë˜ì—ˆìŠµë‹ˆë‹¤.';
   }
 });
 
 
 let phrases = [];
-let accumulatedText = ''; // ´©ÀûµÈ ÅØ½ºÆ®¸¦ ÀúÀåÇÒ º¯¼ö ¼±¾ğ
+let accumulatedText = ''; // ëˆ„ì ëœ í…ìŠ¤íŠ¸ë¥¼ ì €ì¥í•  ë³€ìˆ˜ ì„ ì–¸
 
 function accumulateText(text) {
-  accumulatedText += text + ' '; // Å¬¸¯ÇÑ ½½·ÔÀÇ ÅØ½ºÆ®¸¦ ´©Àû
-  console.log('Accumulated text:', accumulatedText); // ÇöÀç±îÁö ´©ÀûµÈ ÅØ½ºÆ® È®ÀÎ
+  accumulatedText += text + ' '; // í´ë¦­í•œ ìŠ¬ë¡¯ì˜ í…ìŠ¤íŠ¸ë¥¼ ëˆ„ì 
+  console.log('Accumulated text:', accumulatedText); // í˜„ì¬ê¹Œì§€ ëˆ„ì ëœ í…ìŠ¤íŠ¸ í™•ì¸
 }
 
 function copyTextToClipboard(text) {
   navigator.clipboard.writeText(text).then(function() {
     const feedback = document.getElementById('feedback');
-    feedback.textContent = `´©ÀûµÊ : ` + accumulatedText;
-    showFloatingMessage(`º¹»çµÊ : ${text} `, 3000); // ¸Ş½ÃÁö¿Í Ç¥½Ã ½Ã°£(¿¹: 3000ms)
+    feedback.textContent = `ëˆ„ì ë¨ : ` + accumulatedText;
+    showFloatingMessage(`ë³µì‚¬ë¨ : ${text} `, 3000); // ë©”ì‹œì§€ì™€ í‘œì‹œ ì‹œê°„(ì˜ˆ: 3000ms)
     console.log('Text successfully copied to clipboard');
   }, function(err) {
     console.error('Could not copy text: ', err);
@@ -233,7 +233,7 @@ function addPhrase() {
     savePhrases();
     renderPhrases();
   } else {
-    alert("ÀÚÁÖ ¾²´Â ¹®±¸¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+    alert("ìì£¼ ì“°ëŠ” ë¬¸êµ¬ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
   }
 }
 
@@ -248,7 +248,7 @@ function editPhrase(index) {
 }
 
 function deletePhrase(index) {
-  const confirmDelete = confirm("Á¤¸»·Î »èÁ¦ÇÕ´Ï±î?");
+  const confirmDelete = confirm("ì •ë§ë¡œ ì‚­ì œí•©ë‹ˆê¹Œ?");
   if (confirmDelete) {
     phrases.splice(index, 1);
     savePhrases();
@@ -263,10 +263,10 @@ function savePhrases() {
 function setPartition(partition, save = true) {
   const container = document.getElementById('phrasesContainer');
 
-  // ¿­ ¼ö ¼³Á¤
+  // ì—´ ìˆ˜ ì„¤ì •
   container.style.WebkitColumnCount = partition; // WebKit/Chrome/Safari
   container.style.MozColumnCount = partition; // Firefox
-  container.style.columnCount = partition; // ÀÏ¹İ
+  container.style.columnCount = partition; // ì¼ë°˜
 
   if (save) {
     localStorage.setItem('lastPartition', partition);
@@ -278,9 +278,9 @@ function exportToFile() {
   const dlAnchorElem = document.createElement('a');
   dlAnchorElem.setAttribute("href", dataStr);
   dlAnchorElem.setAttribute("download", "MyQuickConversation.json");
-  document.body.appendChild(dlAnchorElem); // Firefox¿¡¼­ ÇÊ¿äÇÒ ¼ö ÀÖÀ½
+  document.body.appendChild(dlAnchorElem); // Firefoxì—ì„œ í•„ìš”í•  ìˆ˜ ìˆìŒ
   dlAnchorElem.click();
-  dlAnchorElem.remove(); // »ı¼ºµÈ ¿ä¼Ò¸¦ Á¦°Å
+  dlAnchorElem.remove(); // ìƒì„±ëœ ìš”ì†Œë¥¼ ì œê±°
 }
 
 function importFromFile(event) {
@@ -293,32 +293,32 @@ function importFromFile(event) {
   fileReader.readAsText(event.target.files[0]);
 }
 
-let draggedItemIndex = null; // µå·¡±×µÈ Ç×¸ñÀÇ ÀÎµ¦½º¸¦ ÀúÀåÇÒ º¯¼ö
+let draggedItemIndex = null; // ë“œë˜ê·¸ëœ í•­ëª©ì˜ ì¸ë±ìŠ¤ë¥¼ ì €ì¥í•  ë³€ìˆ˜
 
 function handleDragStart(e) {
-  draggedItemIndex = parseInt(e.target.getAttribute('data-index')); // µå·¡±× ½ÃÀÛ Ç×¸ñÀÇ ÀÎµ¦½º ÀúÀå
+  draggedItemIndex = parseInt(e.target.getAttribute('data-index')); // ë“œë˜ê·¸ ì‹œì‘ í•­ëª©ì˜ ì¸ë±ìŠ¤ ì €ì¥
 }
 
 function handleDragOver(e) {
-  e.preventDefault(); // ±âº» µ¿ÀÛÀ» ¹æÁöÇÏ¿© drop ÀÌº¥Æ®¸¦ Çã¿ë
+  e.preventDefault(); // ê¸°ë³¸ ë™ì‘ì„ ë°©ì§€í•˜ì—¬ drop ì´ë²¤íŠ¸ë¥¼ í—ˆìš©
 }
 
 function handleDrop(e) {
     e.preventDefault();
-    const target = e.target.closest('.phrase-container'); // °¡Àå °¡±î¿î phraseContainer¸¦ Ã£À½
-    if (!target) return; // µå¶ø ´ë»óÀÌ phraseContainer°¡ ¾Æ´Ï¸é Á¾·á
+    const target = e.target.closest('.phrase-container'); // ê°€ì¥ ê°€ê¹Œìš´ phraseContainerë¥¼ ì°¾ìŒ
+    if (!target) return; // ë“œë ëŒ€ìƒì´ phraseContainerê°€ ì•„ë‹ˆë©´ ì¢…ë£Œ
     
     const targetIndex = parseInt(target.getAttribute('data-index'));
     const draggedElement = phrases[draggedItemIndex];
     
-    // µå¶ø À§Ä¡°¡ ¿ä¼ÒÀÇ Áß°£ ÁöÁ¡º¸´Ù À§ÀÎÁö ¾Æ·¡ÀÎÁö È®ÀÎ
+    // ë“œë ìœ„ì¹˜ê°€ ìš”ì†Œì˜ ì¤‘ê°„ ì§€ì ë³´ë‹¤ ìœ„ì¸ì§€ ì•„ë˜ì¸ì§€ í™•ì¸
     const rect = target.getBoundingClientRect();
-    const offset = e.clientY - rect.top; // ¸¶¿ì½º À§Ä¡¿Í ´ë»ó ¿ä¼Ò »ó´Ü °£ÀÇ °Å¸®
+    const offset = e.clientY - rect.top; // ë§ˆìš°ìŠ¤ ìœ„ì¹˜ì™€ ëŒ€ìƒ ìš”ì†Œ ìƒë‹¨ ê°„ì˜ ê±°ë¦¬
     const middle = rect.height / 2;
     
-    // ¼ø¼­ Àç¹èÄ¡ ·ÎÁ÷
+    // ìˆœì„œ ì¬ë°°ì¹˜ ë¡œì§
     if (offset < middle) {
-        // ¸¶¿ì½º À§Ä¡°¡ Áß°£ ÁöÁ¡º¸´Ù À§¿¡ ÀÖÀ» °æ¿ì, µå·¡±×µÈ ¿ä¼Ò¸¦ ±× À§Ä¡¿¡ »ğÀÔ
+        // ë§ˆìš°ìŠ¤ ìœ„ì¹˜ê°€ ì¤‘ê°„ ì§€ì ë³´ë‹¤ ìœ„ì— ìˆì„ ê²½ìš°, ë“œë˜ê·¸ëœ ìš”ì†Œë¥¼ ê·¸ ìœ„ì¹˜ì— ì‚½ì…
         if (targetIndex < draggedItemIndex) {
             phrases.splice(draggedItemIndex, 1);
             phrases.splice(targetIndex, 0, draggedElement);
@@ -327,7 +327,7 @@ function handleDrop(e) {
             phrases.splice(targetIndex - 1, 0, draggedElement);
         }
     } else {
-        // ¸¶¿ì½º À§Ä¡°¡ Áß°£ ÁöÁ¡º¸´Ù ¾Æ·¡¿¡ ÀÖÀ» °æ¿ì
+        // ë§ˆìš°ìŠ¤ ìœ„ì¹˜ê°€ ì¤‘ê°„ ì§€ì ë³´ë‹¤ ì•„ë˜ì— ìˆì„ ê²½ìš°
         if (targetIndex < draggedItemIndex) {
             phrases.splice(draggedItemIndex, 1);
             phrases.splice(targetIndex + 1, 0, draggedElement);
@@ -337,8 +337,8 @@ function handleDrop(e) {
         }
     }
 
-    savePhrases(); // º¯°æ»çÇ× ÀúÀå
-    renderPhrases(); // ¸®½ºÆ®¸¦ ´Ù½Ã ·»´õ¸µ
+    savePhrases(); // ë³€ê²½ì‚¬í•­ ì €ì¥
+    renderPhrases(); // ë¦¬ìŠ¤íŠ¸ë¥¼ ë‹¤ì‹œ ë Œë”ë§
 }
 
 
@@ -352,8 +352,8 @@ function renderPhrases() {
     phraseEl.classList.add('copy-text');
     phraseEl.textContent = phrase;
     phraseEl.onclick = function() {
-    accumulateText(phrase); // ´©ÀûµÈ ÅØ½ºÆ® °ü¸®
-    copyTextToClipboard(phrase); // Å¬¸³º¸µå¿¡ Áï½Ã º¹»ç
+    accumulateText(phrase); // ëˆ„ì ëœ í…ìŠ¤íŠ¸ ê´€ë¦¬
+    copyTextToClipboard(phrase); // í´ë¦½ë³´ë“œì— ì¦‰ì‹œ ë³µì‚¬
     };
 
     const editBtn = document.createElement('button');
@@ -373,8 +373,8 @@ function renderPhrases() {
     phraseContainer.appendChild(deleteBtn);
     
     container.appendChild(phraseContainer);
-    phraseContainer.setAttribute('draggable', true); // µå·¡±× °¡´ÉÇÏ°Ô ¼³Á¤
-    phraseContainer.setAttribute('data-index', index); // ÀÎµ¦½º¸¦ ¼Ó¼ºÀ¸·Î Ãß°¡
+    phraseContainer.setAttribute('draggable', true); // ë“œë˜ê·¸ ê°€ëŠ¥í•˜ê²Œ ì„¤ì •
+    phraseContainer.setAttribute('data-index', index); // ì¸ë±ìŠ¤ë¥¼ ì†ì„±ìœ¼ë¡œ ì¶”ê°€
     
     phraseContainer.addEventListener('dragstart', handleDragStart);
     phraseContainer.addEventListener('dragover', handleDragOver);
@@ -388,10 +388,10 @@ function renderPhrases() {
 
 function showFloatingMessage(message, duration = 3000) {
   const floatingMessage = document.getElementById('floatingMessage');
-  floatingMessage.textContent = message; // ¸Ş½ÃÁö ¼³Á¤
-  floatingMessage.style.display = 'block'; // ¸Ş½ÃÁö Ç¥½Ã
+  floatingMessage.textContent = message; // ë©”ì‹œì§€ ì„¤ì •
+  floatingMessage.style.display = 'block'; // ë©”ì‹œì§€ í‘œì‹œ
 
-  // ÀÏÁ¤ ½Ã°£(duration) ÈÄ¿¡ ¸Ş½ÃÁö ¼û±â±â
+  // ì¼ì • ì‹œê°„(duration) í›„ì— ë©”ì‹œì§€ ìˆ¨ê¸°ê¸°
   setTimeout(() => {
     floatingMessage.style.display = 'none';
   }, duration);
